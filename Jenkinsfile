@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("srufle/gido-example-app")
+        app = docker.build("stephen0rufle/gido-example-app")
     }
 
     stage('Push image') {
