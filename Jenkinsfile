@@ -17,12 +17,14 @@ node {
         app = docker.build("stephen0rufle/gido-example-app")
     }
 
-    stage('Test') {
-        app.inside{
-            sh 'npm test'
+    ansiColor('xterm') {
+        stage('Test') {
+            app.inside{
+                sh 'npm test'
+            }
         }
     }
-
+    
     stage('Push image') {
         /* Finally, we'll push the image into Docker Hub */
 
